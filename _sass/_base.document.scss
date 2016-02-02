@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $lh; 
+}
+
+body {
+  color: $black;
+  background-color: $beige;
+  font-size: .9*$fs;
+  line-height: .9rem;
+
+  @include breakpoint(900px) {
+    font-size: $fs;
+  }
+  @include gotham-narrow;
+
+  @include breakpoint(900px) {
+    line-height: 1rem;
+  }
+}
+
+::selection {
+  color: $white;
+  background-color: $blue;
+}
+
+::-moz-selection {
+  color: $white;
+  background-color: $blue;
+}

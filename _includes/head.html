@@ -1,0 +1,32 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% assign version = page.url | remove_first: "/" | split: "/" | first %}
+    {% if version == nil %}
+        {% assign version = site.data.project.default_version %}
+    {% endif %}
+
+    {% if page.url == '/' or page.url == version_home %}
+        <title>{{ site.data.project.title }} - {{ site.data.project.tagline }}</title>
+    {% else %}
+        <title>{{ page.title }} - {{ site.data.project.title }}</title>
+    {% endif %}
+
+    <meta name="description" content="{{ site.data.project.description }}">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="http://cloud.typography.com/6194432/633468/css/fonts.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.010/css/hack.min.css">
+    <link rel="stylesheet" href="/css/site.css?v=3">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/js/jquery.min.js">\x3C/script>')</script>
+    <script defer src="/js/vendor.min.js"></script>
+    <script defer src="/js/site.js"></script>
+    <script>if (navigator.appVersion.indexOf("MSIE 10") !== -1) $('html').addClass('ie')</script>
+</head>

@@ -1,0 +1,119 @@
+.main {
+  padding: 27px 11px 40px;
+
+  @include breakpoint(sm) {
+    padding-left: 26px;
+    padding-right: 26px;
+  }
+
+  h1 {
+    display: none;
+    font-size: 1.5em;
+    margin-bottom: 1rem;
+    letter-spacing: .01em;
+    @include gotham-narrow-bold;
+
+    @include breakpoint(md) {
+      display: block;
+    }
+  }
+
+  h2 {
+    text-transform: uppercase;
+    color: $gray;
+    letter-spacing: .025em;
+    @include gotham-narrow-bold;
+  }
+
+  h3 {
+    @include gotham-narrow-bold;
+  }
+
+  p, ul, ol {
+    margin-bottom: 1rem;
+  }
+
+  h2, h3 {
+    margin-bottom: .5rem;
+  }
+
+  .highlight {
+    margin: -20px -4px 1rem;
+  }
+
+  h2 + .highlight,
+  h3 + .highlight {
+    margin-top: 0;
+  }
+
+  p code,
+  ul code,
+  ol code,
+  dl code {
+    background-color: $blue-lighter;
+    font-size: .9em;
+    @include hack;
+  }
+
+  a {
+    @include plain-link;
+    border-bottom: 3px solid $blue-light;
+  }
+
+  .badges {
+    margin-bottom: .5rem;
+
+    a {
+      border-bottom: none;
+    }
+
+  }
+
+  ul li {
+    padding-left: .75em;
+    position: relative;
+
+    &:before {
+      content: "\2043";
+      position: absolute;
+      left: 0;
+      top: -1px;
+      color: $gray;
+    }
+  }
+
+  strong {
+    font-weight: bold;
+  }
+
+  em {
+    font-style: italic;
+  }
+  
+  .version {
+    font-size: .75em;
+    color: $gray-dark;
+    display: inline-block;
+    border: 2px solid $blue-light;
+    background-color: $blue-lighter;
+    padding: 0 .3em;
+    border-radius: 2px;
+    line-height: 1.5;
+    position: relative;
+    top: -.05em;
+    @include gotham-narrow-bold;
+  }
+  
+  h1 .version,
+  h2 .version {
+    top: -.15em;
+  }
+
+  .next {
+    margin-bottom: 0;
+
+    &:after {
+      content: "\00BB";
+    }
+  }
+}

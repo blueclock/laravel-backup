@@ -1,0 +1,87 @@
+.header {
+  $brand-space: 150px;
+
+  color: $white;
+  background: $blue;
+  position: relative;
+  @include clearfix;
+
+  .project {
+    padding: 22px 15px 20px;
+    position: relative;
+
+    @include breakpoint(sm) {
+      padding: 25px 30px 20px 30px;
+      padding-right: 30px;
+      float: left;
+      width: calc(100% - #{$brand-space});
+    }
+
+    h1,
+    h2 {
+      @include has-plain-links;
+
+      @include breakpoint(md) {
+        display: inline-block;
+      }
+    }
+
+    h1 {
+      font-size: 1.8em;
+      @include gotham-narrow-bold;
+    }
+
+    h2 {
+      text-transform: lowercase;
+      color: $blue-light;
+
+      @include breakpoint(md) {
+        margin-left: 5px;
+      }
+    }
+
+    .github {
+      position: absolute;
+      right: 15px;
+      top: 30px;
+      opacity: .8;
+      @include dimensions(32px, 32px);
+      @include svg('github');
+      @include hide-text;
+
+      @include breakpoint(sm) {
+        right: 0;
+      }
+
+      @include breakpoint(md) {
+        top: 22px;
+      }
+    }
+  }
+
+  .brand {
+    display: none;
+    width: $brand-space;
+    float: right;
+    padding: 15px 30px 15px 20px;
+    margin-top: 8px;
+
+    @include breakpoint(sm) {
+      display: block;
+    }
+
+    @include breakpoint(md) {
+      margin: 0;
+    }
+
+    .logotype a {
+      display: block;
+      padding: 10px;
+      border-radius: 3px;
+      background-color: $blue-dark;
+      @include svg('spatie');
+      @include dimensions(100px, 45px);
+      @include hide-text;
+    }
+  }
+}

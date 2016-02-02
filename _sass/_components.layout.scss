@@ -1,0 +1,42 @@
+.container {
+  min-height: 100vh;
+  @include wrap;
+  @include display-flex;
+  @include flex-direction(column);
+}
+
+.content-container {
+  background-color: $white;
+  @include display-flex;
+  @include flex-direction(column);
+  @include flex(1 1 auto);
+
+  @include breakpoint(md) {
+    @include flex-direction(row);
+  }
+
+  @include no-flexbox {
+    @include clearfix;
+  }
+}
+
+.navigation {
+  @include flex(0 0 $sidebar-width);
+
+  @include no-flexbox {
+    width: $sidebar-width;
+    float: left;
+  }
+}
+
+.main {
+  @include flex(1);
+
+  @include no-flexbox {
+    float: left;
+    width: calc(100% - #{$sidebar-width});
+  }
+}
+
+.footer {
+}

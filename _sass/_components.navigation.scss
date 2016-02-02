@@ -1,0 +1,70 @@
+.navigation {
+  line-height: 1.4;
+  padding: 33px 30px 25px;
+  background-color: $blue-light;
+  display: none;
+
+  @include breakpoint(md) {
+    display: block;
+  }
+
+  h2,
+  li {
+    margin-bottom: .5em;
+  }
+
+  h2 {
+    color: $blue;
+    @include gotham-narrow-bold;
+  }
+
+  ul {
+    margin-bottom: 1.4em;
+  }
+
+  li {
+    a {
+      text-decoration: none;
+      color: inherit;
+      display: inline-block;
+      height: 20px;
+    }
+
+    a:hover,
+    &.selected a {
+      border-bottom: 4px solid rgba(#fff, .8);
+    }
+  }
+
+  .version {
+    color: $blue-grayish;
+    text-transform: uppercase;
+    letter-spacing: .025em;
+    font-weight: bold;
+    font-size: .9em;
+    margin-bottom: 1em;
+  }
+}
+
+.navigation-mobile {
+  padding: 15px;
+  background-color: $blue-light;
+
+  @include breakpoint(sm) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @include breakpoint(md) {
+    display: none;
+  }
+}
+
+.navigation_search{
+  width: 100%;
+  font-size: 1.1em;
+  margin-bottom: 1em;
+  border: solid 2px rgba($blue, .5);
+  padding: .25em .5em;
+  color: inherit;
+}

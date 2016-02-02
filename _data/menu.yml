@@ -1,0 +1,9 @@
+v3:
+    index:
+        Introduction: '/'
+        Requirements: '/v3/requirements/'
+        Installation & setup: '/v3/installation-and-setup/'
+        Questions & issues: '/v3/questions-and-issues/'
+        Changelog: '/v3/changelog/'
+    Taking backups:
+        Test: '/v3/taking-backups/test/'
